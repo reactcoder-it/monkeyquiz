@@ -1,13 +1,9 @@
-import Link from "next/link"
 import { makeStyles } from "@material-ui/core/styles"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
 import Box from "@material-ui/core/Box"
 import Button from "@material-ui/core/Button"
-import AppBar from "@material-ui/core/AppBar"
-import Toolbar from "@material-ui/core/Toolbar"
-import IconButton from "@material-ui/core/IconButton"
-import MenuIcon from "@material-ui/icons/Menu"
+import Header from "../components/Header"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,16 +23,7 @@ const IndexPage = () => {
   const classes = useStyles()
   return (
     <div className={classes.root}>
-      <AppBar color="primary">
-        <Toolbar>
-          <Link href="/">
-            <Button className={classes.logo}>MonkeyQuiz</Button>
-          </Link>
-          <IconButton className={classes.menuButton}>
-            <MenuIcon />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
+      <Header />
       <Container fixed>
         <Box my={4}>
           <Typography variant="h4" component="h1" gutterBottom>
