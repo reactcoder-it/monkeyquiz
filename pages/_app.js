@@ -3,10 +3,12 @@ import PropTypes from "prop-types"
 import Head from "next/head"
 import { ThemeProvider } from "@material-ui/core/styles"
 import CssBaseline from "@material-ui/core/CssBaseline"
+import { ApolloProvider } from "@apollo/client"
+import { useApollo } from "../apollo/client"
 import theme from "../theme"
 
-const MyApp = (props) => {
-  const { Component, pageProps } = props
+const MyApp = ({ Component, pageProps }) => {
+  const apolloClient = useApollo(pageProps.initialApolloState)
 
   useEffect(() => {
     // Remove the server-side injected CSS.
@@ -17,7 +19,7 @@ const MyApp = (props) => {
   }, [])
 
   return (
-    <>
+    <ApolloProvider client={apolloClient}>
       <Head>
         <title>MonkeyQuiz</title>
         <meta
@@ -26,11 +28,10 @@ const MyApp = (props) => {
         />
       </Head>
       <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>
-    </>
+    </ApolloProvider>
   )
 }
 

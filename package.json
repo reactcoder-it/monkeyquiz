@@ -6,13 +6,22 @@
   "author": "Vadim Pashaev <vmp@live.ru>",
   "license": "MIT",
   "dependencies": {
+    "@apollo/client": "^3.2.4",
+    "@hapi/iron": "^6.0.0",
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "apollo-server-micro": "^2.18.2",
+    "bcryptjs": "^2.4.3",
     "clsx": "^1.1.1",
+    "cookie": "^0.4.1",
+    "crypto": "^1.0.1",
+    "micro-cors": "^0.1.1",
+    "mongodb": "^3.6.2",
     "next": "^9.5.3",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "uuid": "^8.3.1"
   },
   "scripts": {
     "dev": "next",
