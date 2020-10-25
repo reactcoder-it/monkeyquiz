@@ -6,6 +6,7 @@ import CssBaseline from "@material-ui/core/CssBaseline"
 import { ApolloProvider } from "@apollo/client"
 import { useApollo } from "../apollo/client"
 import theme from "../theme"
+import Footer from "../components/Footer"
 
 const MyApp = ({ Component, pageProps }) => {
   const apolloClient = useApollo(pageProps.initialApolloState)
@@ -30,6 +31,7 @@ const MyApp = ({ Component, pageProps }) => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     </ApolloProvider>
   )
