@@ -35,7 +35,7 @@ const IndexPage = () => {
           </Typography>
           <Box mt={3}>
             <Button color="primary" variant="outlined">
-              THE BEST
+              Найти
             </Button>
           </Box>
         </Box>
